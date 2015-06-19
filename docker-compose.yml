@@ -1,0 +1,16 @@
+web:
+  build: .
+  volumes:
+    - ".:/code"
+  ports:
+    - "8000:80"
+  links:
+    - mysql
+  environment:
+    - MYSQL_HOST=mysql
+
+mysql:
+  image: mysql:5.7
+  ports:
+    - "3306:3306"
+  env_file: ./myapp/.env
