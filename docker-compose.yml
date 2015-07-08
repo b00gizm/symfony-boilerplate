@@ -5,9 +5,14 @@ web:
   ports:
     - "8000:80"
   links:
+    - blackfire
     - mysql
   environment:
     - MYSQL_HOST=mysql
+
+blackfire:
+  image: blackfire/blackfire
+  env_file: ./myapp/.env
 
 mysql:
   image: mysql:5.7

@@ -10,6 +10,7 @@ RUN rm /etc/nginx/sites-enabled/default
 ADD nginx/sites-enabled/ /etc/nginx/sites-enabled
 
 # Configure PHP
+ENV PHP_EXT_DIR /usr/lib/php5/20131226
 ENV PHP_INI_DIR /etc/php5/fpm
 ENV PHP_INI     ${PHP_INI_DIR}/php.ini
 
