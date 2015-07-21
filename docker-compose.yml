@@ -6,6 +6,7 @@ web:
     - "8000:80"
   links:
     - blackfire
+    - elasticsearch
     - mysql
   environment:
     - MYSQL_HOST=mysql
@@ -13,6 +14,12 @@ web:
 blackfire:
   image: blackfire/blackfire
   env_file: ./myapp/.env
+
+elasticsearch:
+  image: elasticsearch:1.7
+  ports:
+    - "9200:9200"
+    - "9300:9300"
 
 mysql:
   image: mysql:5.7
