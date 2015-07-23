@@ -9,5 +9,10 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
+        <script src="/jspm_packages/system.js"></script>
+        <script src="/config.js"></script>
+        <script>
+            System.import('js/main');
+        </script>
     </body>
 </html>
