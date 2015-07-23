@@ -6,8 +6,8 @@ web:
     - elasticsearch
     - mysql
   environment:
-    - MYSQL_HOST=mysql
     - ELASTICSEARCH_HOST=elasticsearch
+    - MYSQL_HOST=mysql
 
 blackfire:
   image: blackfire/blackfire
@@ -23,6 +23,8 @@ phpfpm:
   build: php-fpm/
   links:
     - blackfire
+    - elasticsearch
+    - mysql
   volumes_from:
     - web
 
