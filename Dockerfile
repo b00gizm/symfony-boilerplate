@@ -7,6 +7,7 @@ RUN apt-get install -y \
     php5-curl \
     php5-json \
     php5-mysql \
+    php5-pgsql \
     php5-redis
 
 # Symfony installer
