@@ -2,14 +2,12 @@ web:
   build: .
   volumes:
     - ".:/code"
-  ports:
-    - "8000:80"
   links:
-    - blackfire
     - elasticsearch
     - mysql
   environment:
     - MYSQL_HOST=mysql
+    - ELASTICSEARCH_HOST=elasticsearch
 
 blackfire:
   image: blackfire/blackfire
@@ -21,8 +19,26 @@ elasticsearch:
     - "9200:9200"
     - "9300:9300"
 
+phpfpm:
+  build: php-fpm/
+  links:
+    - blackfire
+  volumes_from:
+    - web
+
 mysql:
   image: mysql:5.7
   ports:
     - "3306:3306"
   env_file: ./myapp/.env
+
+nginx:
+  build: nginx/
+  ports:
+    - "8000:80"
+  links:
+    - phpfpm
+  volumes_from:
+    - web
+  environment:
+    APP_SERVER_NAME: symfony-boilerplate.dev
