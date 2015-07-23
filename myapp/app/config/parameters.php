@@ -11,3 +11,6 @@ $container->setParameter('database_password', getenv('MYSQL_ROOT_PASSWORD'));
 
 $container->setParameter('elasticsearch_host', getenv('ELASTICSEARCH_PORT_9200_TCP_ADDR'));
 $container->setParameter('elasticsearch_port', getenv('ELASTICSEARCH_PORT_9200_TCP_PORT'));
+
+$container->setParameter('redis_host', getenv('REDIS_PORT_6379_TCP_ADDR'));
+$container->setParameter('redis_port', getenv('REDIS_PORT_6379_TCP_PORT'));
