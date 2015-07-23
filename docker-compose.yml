@@ -5,9 +5,11 @@ web:
   links:
     - elasticsearch
     - mysql
+    - redis
   environment:
     - ELASTICSEARCH_HOST=elasticsearch
     - MYSQL_HOST=mysql
+    - REDIS_HOST=redis
 
 blackfire:
   image: blackfire/blackfire
@@ -25,6 +27,7 @@ phpfpm:
     - blackfire
     - elasticsearch
     - mysql
+    - redis
   volumes_from:
     - web
 
@@ -44,3 +47,8 @@ nginx:
     - web
   environment:
     APP_SERVER_NAME: symfony-boilerplate.dev
+
+redis:
+  image: redis:3.0
+  ports:
+    - "6379:6379"

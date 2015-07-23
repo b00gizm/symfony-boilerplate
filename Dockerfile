@@ -2,7 +2,13 @@ FROM ubuntu:15.04
 
 RUN apt-get update
 RUN apt-get install -y curl git
-RUN apt-get install -y php5-fpm php5-curl php5-json php5-mysql
+RUN apt-get install -y \
+    php5-dev \
+    php5-curl \
+    php5-json \
+    php5-mysql \
+    php5-pgsql \
+    php5-redis
 
 # Symfony installer
 RUN curl -LsS http://symfony.com/installer -o /usr/local/bin/symfony

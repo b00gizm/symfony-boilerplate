@@ -2,7 +2,13 @@ FROM ubuntu:15.04
 
 RUN apt-get update
 RUN apt-get install -y curl
-RUN apt-get install -y php5-fpm php5-curl php5-json php5-mysql
+RUN apt-get install -y \
+    php5-fpm \
+    php5-curl \
+    php5-json \
+    php5-mysql \
+    php5-pgsql \
+    php5-redis
 
 # Configure PHP
 ENV PHP_EXT_DIR /usr/lib/php5/20131226

@@ -5,6 +5,11 @@ parameters:
       host: "%elasticsearch_host%"
       port: "%elasticsearch_port%"
 
+    predis.connection:
+      schema: tcp
+      host:   "%redis_host%"
+      port:   "%redis_port%"
+
 services:
     elastica.client:
         class: Elastica\Client
@@ -13,3 +18,7 @@ services:
     elastica.search:
         class: Elastica\Search
         arguments: ["@elastica.client"]
+
+    predis.client:
+        class: Predis\Client
+        arguments: ["%predis.connection%"]
