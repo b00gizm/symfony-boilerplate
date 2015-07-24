@@ -23,6 +23,8 @@ elasticsearch:
 
 phpfpm:
   build: php-fpm/
+  ports:
+    - "9000:9000"
   links:
     - blackfire
     - elasticsearch
