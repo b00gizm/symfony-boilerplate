@@ -3,16 +3,11 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <link rel="stylesheet" href="{{ asset('/css/main.css') }}" />
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-        <script src="/jspm_packages/system.js"></script>
-        <script src="/config.js"></script>
-        <script>
-            System.import('js/main');
-        </script>
+        <script src="{{ asset('/js/main.js') }}"></script>
     </body>
 </html>

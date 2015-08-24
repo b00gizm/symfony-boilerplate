@@ -20,7 +20,7 @@ RUN mv composer.phar /usr/local/bin/composer
 
 # Install Node.js tools
 RUN ln -s /usr/bin/nodejs /usr/bin/node
-RUN npm install -g gulp jspm
+RUN npm install -g gulp bower
 
 RUN mkdir -p /code/myapp
 WORKDIR /code/myapp
