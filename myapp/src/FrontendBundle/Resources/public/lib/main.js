@@ -1,4 +1,6 @@
 import {bootstrap} from './bootstrap';
-import $ from 'jquery';
+import domready from 'domready';
 
-$(document).ready(bootstrap);
+domready(function() {
+    bootstrap(window.jQuery);
+});
