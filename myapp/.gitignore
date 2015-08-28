@@ -7,6 +7,12 @@
 /app/phpunit.xml
 /bin/
 /composer.phar
+/src/FrontendBundle/Resources/public/components/*
+/node_modules/
 /vendor/
 /web/bundles/
+/web/css/*
+!web/css/.gitkeep
+/web/js/*
+!web/js/.gitkeep
 .env
