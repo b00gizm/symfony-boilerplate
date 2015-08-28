@@ -1,13 +1,21 @@
 {
-    "name": "root/myapp",
-    "license": "proprietary",
+    "name": "b00giZm/symfony-boilerplate",
+    "description": "Docker container to get started with Symfony 2.7 LTS and much more.",
+    "version": "0.1.0",
+    "keywords": ["boilerplate", "starter-project", "docker"],
+    "homepage": "https://github.com/b00giZm/symfony-boilerplate",
     "type": "project",
-    "autoload": {
-        "psr-4": {
-            "": "src/",
-            "SymfonyStandard\\": "app/SymfonyStandard/"
+    "license": "MIT",
+
+    "authors": [
+        {
+            "name": "Pascal Cremer",
+            "email": "hello@codenugget.co",
+            "homepage": "http://codenugget.co",
+            "role": "Developer"
         }
-    },
+    ],
+
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.7.*",
@@ -23,9 +31,11 @@
         "ruflin/elastica": "^2.2",
         "predis/predis": "^1.0"
     },
+
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
     },
+
     "scripts": {
         "post-root-package-install": [
             "SymfonyStandard\\Composer::hookRootPackageInstall"
@@ -49,15 +59,24 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::prepareDeploymentTarget"
         ]
     },
+
     "config": {
         "bin-dir": "bin"
     },
+
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
         "symfony-assets-install": "relative",
         "incenteev-parameters": {
             "file": "app/config/parameters.yml"
+        }
+    },
+
+    "autoload": {
+        "psr-4": {
+            "": "src/",
+            "SymfonyStandard\\": "app/SymfonyStandard/"
         }
     }
 }
