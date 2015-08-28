@@ -1,4 +1,15 @@
 {
+  "name": "symfony-boilerplate-node",
+  "version": "0.1.0",
+  "description": "NPM modules to be used for frontend development.",
+  "homepage": "https://github.com/b00giZm/symfony-boilerplate",
+  "keywords": ["frontend", "gulp", "browser"],
+  "author": "Pascal Cremer <hello@codenugget.co>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b00giZm/symfony-boilerplate"
+  },
+
   "devDependencies": {
     "babelify": "^6.2.0",
     "browserify": "^11.0.1",

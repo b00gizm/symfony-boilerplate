@@ -1,6 +1,6 @@
 {
-  "name": "myapp",
-  "version": "0.0.0",
+  "name": "symfony-boilerplate-bower",
+  "version": "0.1.0",
   "homepage": "https://github.com/b00giZm/symfony-boilerplate",
   "moduleType": [
     "es6"

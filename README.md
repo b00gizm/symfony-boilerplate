@@ -95,6 +95,8 @@ Optionally, I suggest that you use [docker-machine](https://docs.docker.com/mach
     $ open http://localdocker.dev:8000/app_dev.php
     ```
 
+![symfony-boilerplate](https://raw.githubusercontent.com/b00giZm/symfony-boilerplate/master/screenshot.png)
+
 **Now go and build something awesome! 🙏**
 
 ## Alternative Way
